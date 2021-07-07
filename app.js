@@ -8,8 +8,17 @@ function Dog(name, owner) { // create dog; we can use name = "Otto" and as well 
   }
 }
 
+// SHORTER SOLUTION
 
-Dog.prototype.bark = function (barkCount) { // barkCount could be defined in argument and we would not need var barCount and if statement
+Dog.prototype.bark = function (barkCount = "1") {
+  for (var i = 0; i < barkCount; i++) {
+    console.log("Bark!");
+  }
+};
+
+/* LONGER SOLUTION
+
+Dog.prototype.bark = function (barkCount) {
   var barkCount = barkCount;
   if (barkCount === undefined) {
     barkCount = 1;
@@ -18,6 +27,8 @@ Dog.prototype.bark = function (barkCount) { // barkCount could be defined in arg
     console.log("Bark!");
   }
 };
+
+*/
 
 Dog.prototype.print = function () {
   console.log(this.owner, "is owner of a lovely fictional Jack Russell puppy called", this.name);
