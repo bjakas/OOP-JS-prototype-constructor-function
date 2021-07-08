@@ -1,4 +1,12 @@
+// SHORTER SOLUTION
+
 function Dog(name = "Unknown", owner = "Unknown owner") {
+  this.name = name;
+  this.owner = owner;
+}
+/* LONGER SOLUTION
+
+function Dog(name, owner) {
   if (name === undefined) {
     this.name = "Unknown";
   } else {
@@ -10,6 +18,7 @@ function Dog(name = "Unknown", owner = "Unknown owner") {
     this.owner = owner;
   }
 }
+*/
 
 // SHORTER SOLUTION
 
