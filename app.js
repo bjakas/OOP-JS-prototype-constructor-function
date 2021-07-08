@@ -12,7 +12,7 @@ function Dog(name, owner) { // create dog; we can use name = "Otto" and as well 
 
 Dog.prototype.bark = function (barkCount = "1") {
   for (var i = 0; i < barkCount; i++) {
-    console.log("Bark!");
+    console.log(this.name, "says: Bark!");
   }
 };
 
@@ -40,8 +40,8 @@ console.log(dog);
 var unknownDog = new Dog();
 console.log(unknownDog);
 
-dog.bark(); // 1 x bark!
-// dog.bark(5); // 5 x bark!
+dog.bark(); // 1 x Otto says: Bark!
+unknownDog.bark(5); // 5 x Unknown says: Bark!
 
 dog.print(); // Božica is owner of a lovely fictional Jack Russell puppy called Otto
 
