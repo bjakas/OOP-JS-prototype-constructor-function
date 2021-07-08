@@ -1,4 +1,4 @@
-function Dog(name = "Otto", owner = "Božica") {
+function Dog(name = "Unknown", owner = "Unknown owner") {
   if (name === undefined) {
     this.name = "Unknown";
   } else {
@@ -35,7 +35,7 @@ Dog.prototype.print = function () {
   console.log(this.owner, "is owner of a lovely fictional Jack Russell puppy called", this.name);
 };
 
-var dog = new Dog();
+var dog = new Dog("Otto", "Božica");
 console.log(dog);
 
 dog.bark(); // 1 x Otto says: Bark!
